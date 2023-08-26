@@ -1,0 +1,28 @@
+body
+{
+    background-color: #333445;
+}
+a
+{
+    text-decoration: none;
+}
+.frontsquare
+{
+    background-color: #1f202b;
+    box-shadow: black 0 0 50px;
+}
+.profile 
+{
+    width: 520px;
+    height: auto;
+}
+.kard
+{
+    background-color: #1f202b;
+    color: white;
+    box-shadow: black 0 0 25px;
+}
+.footer
+{
+    background-color: #11121a;
+}
