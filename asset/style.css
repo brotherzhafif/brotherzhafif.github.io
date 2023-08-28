@@ -24,18 +24,22 @@ a
 .kard
 {   width: 450px;
     height: 310px;
-    background-color: #1f202b;
+    background-color: #11121a;
     color: white;
-    box-shadow: black 0 0 25px;
+    box-shadow: rgba(0, 0, 0, 0.75) 0 0 15px;
 }
 .works
 {   width: 360px;
     height: 260px;
     background-color: #1f202b;
     color: white;
-    box-shadow: black 0 0 25px;
+    box-shadow: rgba(0, 0, 0, 0.75) 0 0 15px;
 }
 .footer
 {
     background-color: #11121a;
+}
+.fullsize
+{
+    position: fixed;
 }
