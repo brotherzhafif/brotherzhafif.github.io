@@ -14,10 +14,23 @@ a
 .profile 
 {
     width: 520px;
-    height: auto;
+    height: 520px;
+}
+.karosel
+{
+    width: 1080px;
+    height: 480px;
 }
 .kard
-{
+{   width: 450px;
+    height: 310px;
+    background-color: #1f202b;
+    color: white;
+    box-shadow: black 0 0 25px;
+}
+.works
+{   width: 360px;
+    height: 260px;
     background-color: #1f202b;
     color: white;
     box-shadow: black 0 0 25px;
