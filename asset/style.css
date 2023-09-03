@@ -1,47 +1,323 @@
 body
 {
-    background-color: #333445;
+    overflow-x: hidden;
+    background-color: #333445;    
 }
 a
 {
     text-decoration: none;
 }
-.frontsquare
+.frontsquare, .works
 {
     background-color: #1f202b;
+    color: white;
     box-shadow: black 0 0 50px;
 }
-.profile 
-{
-    width: 520px;
-    height: 520px;
-}
-.karosel
-{
-    width: 1080px;
-    height: 480px;
-}
-.kard
-{   width: 450px;
-    height: 310px;
-    background-color: #11121a;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.75) 0 0 15px;
-}
-.works
-{   width: 360px;
-    height: 260px;
-    background-color: #1f202b;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.75) 0 0 15px;
-}
-.footer
+.footer, .kard
 {
     background-color: #11121a;
+    color: white;
 }
 .fullsize
 {
     top: 0vh;
     z-index: 100;
     position: fixed;
+}
+.kard
+{   width: 450px;
+     height: 310px;
+        
+}
+
+/* Scroolbar */
+
+::-webkit-scrollbar
+{
+    width: 2vh;
+}
+::-webkit-scrollbar-track
+{
+    background-color: #11121a;
+}
+::-webkit-scrollbar-thumb
+{
+    background-color: black;
+}
+
+@media only screen and (min-width: 1024px) 
+{
+    .desc
+    {
+        font-size: 42px;
+    }
+    .soscon
+    {
+        margin-top: 10vh;
+        font-size: xx-large;
+    }
+    .sosmed
+    {
+        margin-top: 7vh;
+    }
+    .works
+    {   width: 360px;
+        height: 260px;
+    }
+    .kard
+    {   width: 450px;
+        height: 310px;
+    }
+    .profile 
+    {
+        align-self: center;
+        width: 520px;
+        height: 520px;
+    }
+    .karosel
+    {
+        width: 1080px;
+        height: 480px;
+    }   
+    .karoselmain
+    {
+        width: 150vh;
+    }
+    .fot
+    {
+        flex-direction: row-reverse;
+        text-align: end;
+    }
+}
+
+@media only screen and (max-width: 1024px) 
+{
+    .soscon
+    {
+        margin-top: 15vh;
+        font-size: x-large;
+    }
+    .karoselmain
+    {
+        width: 150vh;
+    }
+    .name
+    {
+        font-size: 48px;
+    }
+    .desc
+    {
+        font-size: 28px
+    }
+    .fulldesc, .blockquote-footer, .nap, .fotext
+    {
+        margin: 0;
+        font-size: 16px;
+    }
+    .lifo
+    {
+        font-size: 12px;
+    }
+    .works
+    {   width: 640px;
+        height: 425px;
+        font-size: 18px;
+    }
+    .work
+    {
+        flex-direction: column;
+    }
+    .kard
+    {   width: 420px;
+        height: 310px;
+    }
+    .profile 
+    {
+        align-self: center;
+        width: 440px;
+        height: 440px;
+    }
+    .karosel
+    {
+        width: 1080px;
+        height: 480px;
+    }   
+    .fot
+    {
+        flex-direction: row-reverse;
+        text-align: end;
+    }
+}
+
+@media only screen and (max-width: 768px) 
+{
+    .soscon
+    {
+        margin-top: 10vh;
+        font-size: xx-large;
+    }
+    .sosmed
+    {
+        margin-top: 5vh;
+    }
+    .kard, .works
+    {   width: 640px;
+        height: 425px;
+        font-size: 18px;
+    }
+    .achif
+    {
+        flex-direction: column;
+    }
+    .profile 
+    {
+        align-self: flex-end;
+        width: 420px;
+        height: 420px;
+    }
+    .karosel
+    {
+        height: 360px;
+        width: 100px;
+    } 
+    .karoselmain
+    {
+        width: 100vh;
+    }
+    .right-me
+    {
+        display: none;
+    }
+    .fosec
+    {
+        margin-left: 15vh;
+        flex-direction: column;
+    }
+    .foco
+    {
+        width: 100vh;
+    }
+    .fot
+    {
+        flex-direction: row;
+        text-align: start;
+    }
+}
+
+@media only screen and (max-width: 425px) 
+{
+    .kardnem
+    {
+        font-size: large;
+    }
+    .karddes
+    {
+        font-size: xx-small;
+    }
+    .soscon
+    {
+       display: none;
+    }
+    .sosmed
+    {
+        margin-top: 5vh;
+    }
+    .kard, .works
+    {   width: 280px;
+        height: 210px;
+        font-size: 10px;
+    }
+    .achif
+    {
+        flex-direction: column;
+    }
+    .name
+    {
+        font-size: 14px;
+    }
+    .blockquote-footer
+    {
+        font-size: 8px;
+    }
+    .desc
+    {
+        font-size: 10px;
+    }
+    .left-me
+    {
+        padding-top: 2.5vh;
+    }
+    .profile 
+    {
+        align-self: flex-end;
+        width: 180px;
+        height: 180px;
+    }
+    .karosel
+    {
+        height: 240px;
+        width: 100px;
+    } 
+    .karoselmain
+    {
+        width: 60vh;
+        align-self: center;
+    }
+    .right-me
+    {
+        display: none;
+    }
+    .fosec
+    {
+        flex-direction: column;
+    }
+    .foco
+    {
+        width: 10px;
+    }
+    .fot
+    {
+        flex-direction: row;
+        text-align: start;
+    }
+}
+@media only screen and (max-width: 375px) 
+{
+    .karoselmain
+    {
+        width: 55vh;
+        align-self: center;
+    }
+}
+@media only screen and (max-width: 320px) 
+{
+    .karoselmain
+    {
+        width: 45vh;
+        align-self: center;
+    }
+    .fosec
+    {
+        margin-left: 0;
+    }
+    .fotext
+    {
+        font-size: 12px;
+    }
+    .lifo
+    {
+        font-size: 10px;
+    }
+    .foco
+    {
+        width: 150%;
+    }
+    .nama
+    {
+        left: 5vh;
+    }
+    .kopirek
+    {
+        right: 5vh;
+    }
 }

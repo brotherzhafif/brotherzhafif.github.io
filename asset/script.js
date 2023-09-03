@@ -1,7 +1,6 @@
-
 function zoom(element) 
 	{
-		console.log("kontol")
+		console.log("full size")
     	element.classList.toggle("fullsize");
 		element.classList.toggle("position-absolute");
 	}
