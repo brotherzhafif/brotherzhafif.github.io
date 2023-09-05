@@ -1,6 +1,7 @@
-body
+body, html
 {
     overflow-x: hidden;
+    width: 100%;
     background-color: #333445;    
 }
 a
@@ -31,10 +32,9 @@ a
 }
 
 /* Scroolbar */
-
 ::-webkit-scrollbar
 {
-    width: 2vh;
+    width: 0;
 }
 ::-webkit-scrollbar-track
 {
@@ -99,7 +99,7 @@ a
     }
     .karoselmain
     {
-        width: 150vh;
+        width: 100vh;
     }
     .name
     {
@@ -195,7 +195,7 @@ a
     }
     .foco
     {
-        width: 100vh;
+        width: 100%;
     }
     .fot
     {
@@ -280,22 +280,7 @@ a
         flex-direction: row;
         text-align: start;
     }
-}
-@media only screen and (max-width: 375px) 
-{
-    .karoselmain
-    {
-        width: 55vh;
-        align-self: center;
-    }
-}
-@media only screen and (max-width: 320px) 
-{
-    .karoselmain
-    {
-        width: 45vh;
-        align-self: center;
-    }
+
     .fosec
     {
         margin-left: 0;
@@ -320,4 +305,21 @@ a
     {
         right: 5vh;
     }
+}
+@media only screen and (max-width: 375px) 
+{
+    .karoselmain
+    {
+        width: 55vh;
+        align-self: center;
+    }
+}
+@media only screen and (max-width: 320px) 
+{
+    .karoselmain
+    {
+        width: 45vh;
+        align-self: center;
+    }
+
 }
