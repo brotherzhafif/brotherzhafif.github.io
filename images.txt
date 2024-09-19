@@ -1,0 +1,6 @@
+high-res/achievement/
+high-res/achievement/koleb.png
+high-res/achievement/lks.png
+high-res/achievement/pameran.png
+
+high-res/certificate/

@@ -53,7 +53,8 @@ a
     }
     .soscon
     {
-        margin-top: 10vh;
+        position: relative;
+        top: 50px;
         font-size: xx-large;
     }
     .sosmed
@@ -104,7 +105,8 @@ a
     }
     .soscon
     {
-        margin-top: 15vh;
+        position: relative;
+        top: 85px;
         font-size: x-large;
     }
     .karoselmain
@@ -163,7 +165,8 @@ a
 {
     .soscon
     {
-        margin-top: 10vh;
+        position: relative;
+        top: 50px;
         font-size: xx-large;
     }
     .sosmed
@@ -226,7 +229,7 @@ a
     }
     .soscon
     {
-       display: none;
+        display: none;
     }
     .sosmed
     {

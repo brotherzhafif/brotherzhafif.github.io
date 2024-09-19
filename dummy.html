@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Karosel with Incremental Naming</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="karoselContainer"></div>
+
+    <script>
+        // Define the number of images you want to generate (e.g., 5 images)
+        const totalImages = 5;
+
+        // Parent container where the karosel divs will be appended
+        const container = document.getElementById('karoselContainer');
+
+        // Loop through the number of images
+        for (let i = 1; i <= totalImages; i++) {
+            // Construct image filenames dynamically using the loop counter
+            const lowResImg = `asset/img/low-res/certificate/${i}.png`;
+            const highResImg = `asset/img/high-res/certificate/${i}.png`;
+
+            // Build the HTML structure using template literals
+            const html = `
+                <div>
+                    <img onclick="zoom(this)" loading="lazy" src="${highResImg}" class="position-absolute h-100 d-block p-3">
+                </div>
+            `;
+            // Append the HTML to the container
+            container.innerHTML += html;
+        }
+
+        // Function to zoom on click (for demonstration purposes)
+        function zoom(img) {
+            alert(`Zooming image: ${img.src}`);
+        }
+    </script>
+</body>
+
+</html>
