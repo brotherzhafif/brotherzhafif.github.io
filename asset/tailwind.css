@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for dark mode backgrounds and surfaces */
+.bg-dark {
+    @apply bg-background text-white;
+}
+
+.bg-surface {
+    @apply bg-surface text-white;
+}
+
+.text-neutral-400 {
+    color: #b0b3c7;
+}
+
+.font-mono {
+    font-family: Fira Mono, Menlo, Monaco, Consolas, monospace;
+}
