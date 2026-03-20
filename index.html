@@ -9,7 +9,6 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="asset/aos/aos.css">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -56,21 +55,21 @@
     <div class="w-full p-0">
         <div class="w-full">
             
-            <div id="Header" class="flex flex-col items-center">
-                <div class="mt-12 w-full flex flex-col"></div>
-                <div class="h-full absolute w-full text-white flex flex-row z-10">
+            <div id="Header" class="w-full relative flex flex-col items-center">
+                
+                <div class="absolute w-full text-white flex flex-row z-10 pointer-events-none">
 
-                    <div data-aos="fade-right" class="m-12 w-[58.333%] pt-6 sm:pt-0">
+                    <div data-aos="fade-right" class="w-[90%] sm:w-[58.333%] p-6 pt-12 sm:p-12 pointer-events-auto">
                         <blockquote class="relative">
                             <a class="text-white decoration-transparent" href="https://www.google.com/search?q=raja+zhafif+raditya+harahap">
-                                <p class="text-[14px] sm:text-5xl lg:text-6xl font-light leading-tight">Raja Zhafif Raditya <br> Harahap</p>
+                                <p class="text-[18px] sm:text-5xl lg:text-6xl font-light leading-tight">Raja Zhafif Raditya <br> Harahap</p>
                             </a>
-                            <footer class="mt-1 text-[8px] sm:text-base text-white/70">Also Known As <cite title="Japip" class="not-italic">Japip</cite></footer>
-                            <hr class="w-1/2 my-4 border-white/20">
-                            <p class="text-[10px] sm:text-3xl lg:text-[42px] font-light leading-tight">Designer, Software Developer <br> Competitive Programmer</p>
-                            <footer class="mt-1 text-[8px] sm:text-base text-white/70">Member Of <cite title="Kukang Developer" class="not-italic">Kukang Developer</cite></footer>
+                            <footer class="mt-2 sm:mt-4 text-[10px] sm:text-base text-neutral-400">Also Known As <cite title="Japip" class="not-italic text-neutral-300">Japip</cite></footer>
+                            <hr class="w-3/4 sm:w-1/2 mt-4 mb-4 sm:mt-10 sm:mb-6 border-neutral-700">
+                            <p class="text-[12px] sm:text-3xl lg:text-[42px] font-light leading-tight">Designer, Software Developer <br> Competitive Programmer</p>
+                            <footer class="mt-2 sm:mt-4 text-[10px] sm:text-base text-neutral-400">Member Of <cite title="Kukang Developer" class="not-italic text-neutral-300">Kukang Developer</cite></footer>
 
-                            <div data-aos-delay="200" data-aos="fade-right" class="hidden sm:flex sm:relative sm:top-[50px] sm:text-4xl md:top-[85px] md:text-2xl lg:top-[50px] lg:text-4xl gap-4">
+                            <div data-aos-delay="200" data-aos="fade-right" class="hidden sm:flex mt-16 sm:mt-20 sm:text-4xl md:text-2xl lg:text-4xl gap-4">
                                 <a data-aos-delay="300" data-aos="fade-up" class="text-white hover:text-white/80 transition-colors" href="https://www.youtube.com/@BrotherZhafif"><i class="bi bi-youtube"></i></a>
                                 <a data-aos-delay="400" data-aos="fade-in" class="text-white hover:text-white/80 transition-colors" href="https://www.instagram.com/brotherzhafif/"><i class="bi bi-instagram"></i></a>
                                 <a data-aos-delay="500" data-aos="fade-in" class="text-white hover:text-white/80 transition-colors" href="https://github.com/brotherzhafif"><i class="bi bi-github"></i></a>
@@ -80,16 +79,16 @@
                         </blockquote>
                     </div>
 
-                    <div data-aos="fade-left" class="hidden md:block absolute z-0 right-0 pt-3 m-12 w-5/12">
+                    <div data-aos="fade-left" class="hidden md:block absolute right-0 pt-3 p-12 w-5/12 pointer-events-auto">
                         <blockquote class="text-right">
-                            <footer class="mt-1 text-base text-white/70">Introduction</footer>
+                            <footer class="mt-1 text-base text-neutral-500">Introduction</footer>
                             <p class="text-3xl lg:text-[42px] font-light mb-4">About Me</p>
 
                             <div class="flex flex-row-reverse">
-                                <hr class="w-1/2 my-4 border-white/20">
+                                <hr class="w-1/2 mt-10 mb-6 border-neutral-700">
                             </div>
 
-                            <p class="font-mono text-base text-white/50 mt-4 mb-12">
+                            <p class="font-mono text-base text-neutral-400 mt-6 mb-16">
                                 I Love Participating In Competitive Competition <br>
                                 My Dream Is To Become A Game Developer <br>
                                 And Start My Own Company <br><br>
@@ -99,35 +98,34 @@
 
                             <div style="height: 1px;"></div>
 
-                            <div data-aos-delay="200" data-aos="fade-left" class="mt-12 font-mono text-base">
-                                <a data-aos-delay="500" data-aos="fade-left" class="text-white mx-3 hover:underline" href="#Achievement">Achievement</a>
-                                <a data-aos-delay="400" data-aos="fade-left" class="text-white mx-3 hover:underline" href="#Works">Works</a>
-                                <a data-aos-delay="300" data-aos="fade-left" class="text-white ml-3 hover:underline" href="#Technology">Technology</a>
+                            <div data-aos-delay="200" data-aos="fade-left" class="mt-16 sm:mt-20 font-mono text-base">
+                                <a data-aos-delay="500" data-aos="fade-left" class="text-neutral-300 mx-3 hover:underline" href="#Achievement">Achievement</a>
+                                <a data-aos-delay="400" data-aos="fade-left" class="text-neutral-300 mx-3 hover:underline" href="#Works">Works</a>
+                                <a data-aos-delay="300" data-aos="fade-left" class="text-neutral-300 ml-3 hover:underline" href="#Technology">Technology</a>
                             </div>
                         </blockquote>
                     </div>
                 </div>
-            </div>
 
-            <div class="w-full absolute flex flex-col pointer-events-none">
-                <div data-aos="fade-up" class="w-[180px] h-[180px] self-end md:w-[420px] md:h-[420px] lg:w-[440px] lg:h-[440px] xl:w-[520px] xl:h-[520px] xl:self-center flex justify-center items-center relative z-0">
-                    <img class="absolute w-full h-full object-contain" src="asset/img/low-res/me2.png" alt="Profile Low Res">
-                    <img loading="lazy" class="absolute w-full h-full object-contain" src="asset/img/high-res/me2.png" alt="Profile High Res">
+                <div class="w-full absolute flex flex-col pointer-events-none z-0">
+                    <div data-aos="fade-up" class="w-[200px] h-[200px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] lg:w-[440px] lg:h-[440px] xl:w-[520px] xl:h-[520px] self-end xl:self-center flex justify-center items-center relative mt-16 sm:mt-10 md:mt-0 right-0 xl:right-auto">
+                        <img class="absolute w-full h-full object-contain" src="asset/img/low-res/me2.png" alt="Profile Low Res">
+                        <img loading="lazy" class="absolute w-full h-full object-contain" src="asset/img/high-res/me2.png" alt="Profile High Res">
+                    </div>
                 </div>
             </div>
 
-            <div data-aos="fade-up">
-                <div class="w-[180px] h-[180px] md:h-[420px] lg:h-[440px] xl:h-[520px]"></div>
+            <div data-aos="fade-up" class="relative z-20">
+                <div class="w-full h-[250px] sm:h-[380px] md:h-[450px] lg:h-[480px] xl:h-[550px]"></div>
 
-                <div id="Achievement" class="bg-[#1f202b] shadow-[0_0_50px_black] text-white flex flex-col items-center p-12 z-20 relative rounded-b-[2rem] rounded-t-lg">
-
+                <div id="Achievement" class="bg-[#1f202b] shadow-[0_0_50px_black] text-white flex flex-col items-center p-6 md:p-12 z-20 relative rounded-b-[2rem] rounded-t-lg">
                     <div data-aos="fade-up" class="m-12 w-full">
 
                         <div class="text-center mb-8">
                             <p class="text-lg md:text-3xl lg:text-4xl font-light">Achievement</p>
                             <p class="text-[10px] md:text-base text-white/50">My Achievement I Did As Software Engineering Student In School</p>
                             <div class="flex flex-col w-full items-center mt-4">
-                                <hr class="w-[75vh] border-white/20">
+                                <hr class="w-full border-white/20">
                             </div>
                         </div>
 
@@ -199,7 +197,7 @@
                         <p class="text-lg md:text-3xl lg:text-4xl font-light">Software Creation</p>
                         <p class="text-[10px] md:text-base text-white/50">Some Software I Develop For Learning And Competition Purpose</p>
                         <div class="flex flex-col w-full items-center mt-4">
-                            <hr class="w-[75vh] border-white/20">
+                            <hr class="w-full border-white/20">
                         </div>
                     </div>
 
@@ -245,7 +243,7 @@
                         <p class="text-lg md:text-3xl lg:text-4xl font-light">Creative Creation</p>
                         <p class="text-[10px] md:text-base text-white/50">My Arts And Animations I Make For Fun As A Hobby In Free Time</p>
                         <div class="flex flex-col w-full items-center mt-4">
-                            <hr class="w-[75vh] border-white/20">
+                            <hr class="w-full border-white/20">
                         </div>
                     </div>
 
@@ -283,11 +281,11 @@
                 </div>
             </div>
 
-            <div data-aos="fade-up" id="Technology" class="bg-[#1f202b] shadow-[0_0_50px_black] text-white flex flex-col items-center z-30 relative">
+            <div data-aos="fade-up" id="Technology" class="bg-[#1f202b] shadow-[0_0_50px_black] text-white flex flex-col items-center z-30 relative aos-init aos-animate">
 
                 <div class="flex flex-col sm:flex-col lg:flex-row items-center sm:ml-[15vh] lg:ml-0 w-full lg:w-3/4 p-12 gap-8 lg:gap-0">
 
-                    <div class="w-[150%] sm:w-full lg:w-1/2 flex flex-row-reverse items-end">
+                    <div class="w-[100%] sm:w-full lg:w-1/2 flex flex-row-reverse items-end">
                         <blockquote class="w-1/3">
                             <p class="text-[12px] sm:text-base opacity-0">Technology I Used</p>
                             <div class="pt-2 grid text-base font-mono gap-1">
@@ -313,7 +311,7 @@
                         </blockquote>
                     </div>
 
-                    <div class="w-[150%] sm:w-full lg:w-1/2 flex flex-row lg:flex-row-reverse text-left lg:text-right items-end">
+                    <div class="w-[100%] sm:w-full lg:w-1/2 flex flex-row lg:flex-row-reverse text-left lg:text-right items-end">
                         <blockquote class="w-2/3">
                             <p class="text-[12px] sm:text-base">Special Thanks</p>
                             <div class="pt-3 grid text-base font-mono gap-1">
@@ -353,15 +351,9 @@
         </div>
     </div>
 
-    <script src="asset/bootstrap/js/bootstrap.js"></script>
-    <script src="asset/aos/aos.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="asset/script.js"></script>
-
-    <script>
-        AOS.init();
-    </script>
 </body>
 
 </html>
