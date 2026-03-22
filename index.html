@@ -5,10 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Raja Zhafif Raditya Harahap</title>
-    <link rel="shortcut icon" href="asset/img/high-res/me2.png" type="image/x-icon">
+    <link id="web-favicon" rel="shortcut icon" href="" type="image/x-icon">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -31,6 +32,19 @@
             }
         }
 
+        /* Scrollbar khusus untuk laci Achievement */
+        .drawer-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+        .drawer-scroll::-webkit-scrollbar-track {
+            background-color: #11121a;
+            border-radius: 4px;
+        }
+        .drawer-scroll::-webkit-scrollbar-thumb {
+            background-color: #333445;
+            border-radius: 4px;
+        }
+
         /* Custom Swiper Pagination (Indikator Kotak) */
         .swiper-pagination-bullet {
             width: 14px !important;
@@ -51,25 +65,29 @@
 </head>
 
 <body class="overflow-x-hidden w-full text-white bg-[#333445]">
+    <div id="global-loader" class="fixed inset-0 z-[999] bg-[#333445] flex flex-col items-center justify-center transition-opacity duration-700 ease-in-out">
+        <i class="bi bi-code-square text-6xl text-white animate-pulse mb-4"></i>
+        <p class="text-white font-mono animate-pulse tracking-widest">Memuat Portofolio...</p>
+    </div>
 
     <div class="w-full p-0">
         <div class="w-full">
             
-            <div id="Header" class="w-full relative flex flex-col items-center">
+            <div id="Header" class="w-full h-[250px] sm:h-[380px] md:h-[450px] lg:h-[480px] xl:h-[550px] w-full relative flex flex-col items-center">
                 
                 <div class="absolute w-full text-white flex flex-row z-10 pointer-events-none">
 
-                    <div data-aos="fade-right" class="w-[90%] sm:w-[58.333%] p-6 pt-12 sm:p-12 pointer-events-auto">
+                    <div data-aos="fade-right" class="w-[90%] sm:w-[75%] ml-6 p-6 pt-12 sm:p-30 pointer-events-auto">
                         <blockquote class="relative">
                             <a class="text-white decoration-transparent" href="https://www.google.com/search?q=raja+zhafif+raditya+harahap">
-                                <p class="text-[18px] sm:text-5xl lg:text-6xl font-light leading-tight">Raja Zhafif Raditya <br> Harahap</p>
+                                <p id="profile-name" class="text-[18px] sm:text-5xl lg:text-6xl font-light leading-tight">Loading...</p>
                             </a>
-                            <footer class="mt-2 sm:mt-4 text-[10px] sm:text-base text-neutral-400">Also Known As <cite title="Japip" class="not-italic text-neutral-300">Japip</cite></footer>
+                            <footer class="mt-2 sm:mt-4 text-[10px] sm:text-base text-neutral-400">Also Known As <cite id="profile-alias" class="not-italic text-neutral-300"></cite></footer>
                             <hr class="w-3/4 sm:w-1/2 mt-4 mb-4 sm:mt-10 sm:mb-6 border-neutral-700">
-                            <p class="text-[12px] sm:text-3xl lg:text-[42px] font-light leading-tight">Designer, Software Developer <br> Competitive Programmer</p>
-                            <footer class="mt-2 sm:mt-4 text-[10px] sm:text-base text-neutral-400">Member Of <cite title="Kukang Developer" class="not-italic text-neutral-300">Kukang Developer</cite></footer>
+                            <p id="profile-role" class="text-[12px] sm:text-3xl lg:text-[42px] font-light leading-tight"></p>
+                            <footer class="mt-2 sm:mt-4 text-[10px] sm:text-base text-neutral-400">Member Of <cite id="profile-org" class="not-italic text-neutral-300"></cite></footer>
 
-                            <div data-aos-delay="200" data-aos="fade-right" class="hidden sm:flex mt-16 sm:mt-20 sm:text-4xl md:text-2xl lg:text-4xl gap-4">
+                            <div data-aos-delay="200" data-aos="fade-right" class="flex mt-4 sm:text-4xl md:text-4xl lg:text-5xl lg:gap-8 lg:mt-12 gap-4">
                                 <a data-aos-delay="300" data-aos="fade-up" class="text-white hover:text-white/80 transition-colors" href="https://www.youtube.com/@BrotherZhafif"><i class="bi bi-youtube"></i></a>
                                 <a data-aos-delay="400" data-aos="fade-in" class="text-white hover:text-white/80 transition-colors" href="https://www.instagram.com/brotherzhafif/"><i class="bi bi-instagram"></i></a>
                                 <a data-aos-delay="500" data-aos="fade-in" class="text-white hover:text-white/80 transition-colors" href="https://github.com/brotherzhafif"><i class="bi bi-github"></i></a>
@@ -79,7 +97,7 @@
                         </blockquote>
                     </div>
 
-                    <div data-aos="fade-left" class="hidden md:block absolute right-0 pt-3 p-12 w-5/12 pointer-events-auto">
+                    <div data-aos="fade-left" class="hidden mt-8 xl:block absolute right-0 pt-3 p-12 w-5/12 pointer-events-auto">
                         <blockquote class="text-right">
                             <footer class="mt-1 text-base text-neutral-500">Introduction</footer>
                             <p class="text-3xl lg:text-[42px] font-light mb-4">About Me</p>
@@ -88,17 +106,13 @@
                                 <hr class="w-1/2 mt-10 mb-6 border-neutral-700">
                             </div>
 
-                            <p class="font-mono text-base text-neutral-400 mt-6 mb-16">
-                                I Love Participating In Competitive Competition <br>
-                                My Dream Is To Become A Game Developer <br>
-                                And Start My Own Company <br><br>
-                                Making Minecraft Animation Is My Hobby<br>
-                                I Draw Pixelart For Fun In Free Time
+                            <p id="profile-desc" class="font-mono text-base text-neutral-400 mt-6 mb-16">
+                                Memuat deskripsi...
                             </p>
 
                             <div style="height: 1px;"></div>
 
-                            <div data-aos-delay="200" data-aos="fade-left" class="mt-16 sm:mt-20 font-mono text-base">
+                            <div data-aos-delay="200" data-aos="fade-left" class="mt-12 sm:mt-8 font-mono text-base">
                                 <a data-aos-delay="500" data-aos="fade-left" class="text-neutral-300 mx-3 hover:underline" href="#Achievement">Achievement</a>
                                 <a data-aos-delay="400" data-aos="fade-left" class="text-neutral-300 mx-3 hover:underline" href="#Works">Works</a>
                                 <a data-aos-delay="300" data-aos="fade-left" class="text-neutral-300 ml-3 hover:underline" href="#Technology">Technology</a>
@@ -109,61 +123,38 @@
 
                 <div class="w-full absolute flex flex-col pointer-events-none z-0">
                     <div data-aos="fade-up" class="w-[200px] h-[200px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] lg:w-[440px] lg:h-[440px] xl:w-[520px] xl:h-[520px] self-end xl:self-center flex justify-center items-center relative mt-16 sm:mt-10 md:mt-0 right-0 xl:right-auto">
-                        <img class="absolute w-full h-full object-contain" src="asset/img/low-res/me2.png" alt="Profile Low Res">
-                        <img loading="lazy" class="absolute w-full h-full object-contain" src="asset/img/high-res/me2.png" alt="Profile High Res">
+                        
+                        <img id="profile-img-low" class="absolute w-full h-full object-contain blur-md transition-all duration-700 ease-in-out scale-110" alt="Profile Low">
+                        
+                        <img id="profile-img-high" class="absolute w-full h-full object-contain opacity-0 transition-opacity duration-700 ease-in-out" alt="Profile High" onload="this.classList.remove('opacity-0'); document.getElementById('profile-img-low').classList.add('opacity-0');">
                     </div>
                 </div>
             </div>
 
             <div data-aos="fade-up" class="relative z-20">
-                <div class="w-full h-[250px] sm:h-[380px] md:h-[450px] lg:h-[480px] xl:h-[550px]"></div>
-
                 <div id="Achievement" class="bg-[#1f202b] shadow-[0_0_50px_black] text-white flex flex-col items-center p-6 md:p-12 z-20 relative rounded-b-[2rem] rounded-t-lg">
                     <div data-aos="fade-up" class="m-12 w-full">
 
-                        <div class="text-center mb-8">
+                       <div class="text-center mb-8">
                             <p class="text-lg md:text-3xl lg:text-4xl font-light">Achievement</p>
                             <p class="text-[10px] md:text-base text-white/50">My Achievement I Did As Software Engineering Student In School</p>
                             <div class="flex flex-col w-full items-center mt-4">
-                                <hr class="w-full border-white/20">
+                                <hr class="w-full sm:w-[75vh] border-white/20 mb-8">
                             </div>
                         </div>
 
-                        <div class="flex flex-col text-sm md:text-base w-full">
-                            <div class="flex flex-col md:flex-row self-center text-center m-2 gap-4">
-                                <div data-aos="fade-right" class="flex flex-col items-center justify-center">
-                                    <div class="m-3 w-[280px] h-[210px] sm:w-[640px] sm:h-[425px] md:w-[420px] md:h-[310px] lg:w-[450px] lg:h-[310px] text-[10px] sm:text-[18px] lg:text-base bg-[#11121a] shadow-2xl rounded-lg p-3 relative flex flex-col">
-                                        <p class="z-10 relative">Juara 1 LKS ITSSB Tingkat Provinsi Kalteng 2022</p>
-                                        <img src="asset/img/low-res/achievement/3.png" class="absolute self-center w-full p-2 bottom-0 object-contain h-[80%]">
-                                        <img loading="lazy" src="asset/img/high-res/achievement/3.png" class="absolute self-center w-full p-2 bottom-0 object-contain h-[80%]">
-                                    </div>
-                                </div>
+                        <div id="achievement-highlight" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
+                            <p class="text-center text-neutral-500 col-span-full">Loading achievements...</p>
+                        </div>
 
-                                <div data-aos="fade-left" class="flex flex-col items-center justify-center">
-                                    <div class="m-3 w-[280px] h-[210px] sm:w-[640px] sm:h-[425px] md:w-[420px] md:h-[310px] lg:w-[450px] lg:h-[310px] text-[10px] sm:text-[18px] lg:text-base bg-[#11121a] shadow-2xl rounded-lg p-3 relative flex flex-col">
-                                        <p class="z-10 relative">Juara 1 Team Pameran Inovasi Pendidikan Kalteng 2022</p>
-                                        <img src="asset/img/low-res/achievement/4.png" class="absolute self-center w-full p-2 bottom-0 object-contain h-[80%]">
-                                        <img loading="lazy" src="asset/img/high-res/achievement/4.png" class="absolute self-center w-full p-2 bottom-0 object-contain h-[80%]">
-                                    </div>
-                                </div>
-                            </div>
+                        <button id="btn-show-more-achievements" onclick="toggleAchievementDrawer()" class="mt-10 px-6 py-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-full transition-colors hidden font-mono text-sm border border-neutral-600">
+                            Show More <i class="bi bi-chevron-down ml-1"></i>
+                        </button>
 
-                            <div class="flex flex-col md:flex-row self-center text-center m-2 gap-4">
-                                <div data-aos="fade-right" class="flex flex-col items-center justify-center">
-                                    <div class="m-3 w-[280px] h-[210px] sm:w-[640px] sm:h-[425px] md:w-[420px] md:h-[310px] lg:w-[450px] lg:h-[310px] text-[10px] sm:text-[18px] lg:text-base bg-[#11121a] shadow-2xl rounded-lg p-3 relative flex flex-col">
-                                        <p class="z-10 relative">Juara 1 Team Lomba Programming Tingkat SMK/SMA</p>
-                                        <img src="asset/img/low-res/achievement/2.png" class="absolute self-center w-full p-2 bottom-0 object-contain h-[80%]">
-                                        <img loading="lazy" src="asset/img/high-res/achievement/2.png" class="absolute self-center w-full p-2 bottom-0 object-contain h-[80%]">
+                        <div id="achievement-drawer" class="hidden w-full max-w-6xl mt-8 border-t border-neutral-700 pt-8 transition-all duration-500">
+                            <div class="overflow-y-auto max-h-[60vh] pr-2 drawer-scroll">
+                                <div id="achievement-grid-all" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                                     </div>
-                                </div>
-
-                                <div data-aos="fade-left" class="flex flex-col items-center justify-center">
-                                    <div class="m-3 w-[280px] h-[210px] sm:w-[640px] sm:h-[425px] md:w-[420px] md:h-[310px] lg:w-[450px] lg:h-[310px] text-[10px] sm:text-[18px] lg:text-base bg-[#11121a] shadow-2xl rounded-lg p-3 relative flex flex-col">
-                                        <p class="z-10 relative">Berpartisipasi Dalam Pembuatan Enkape</p>
-                                        <img src="asset/img/low-res/achievement/1.png" class="absolute self-center w-full p-2 bottom-0 object-contain h-[80%]">
-                                        <img loading="lazy" src="asset/img/high-res/achievement/1.png" class="absolute self-center w-full p-2 bottom-0 object-contain h-[80%]">
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
